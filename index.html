@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://cdn.jsdelivr.net/gh/fluffy-factory/magnet-mouse@latest/lib/magnet-mouse.min.js"></script>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="hamburger ">
+        <span class="line"></span>
+        <span class="line-short"></span>
+    </div>
+
+
+    <script>
+        const hamburger = document.querySelector('.hamburger');
+        hamburger.addEventListener('click', ()=>{
+          hamburger.classList.toggle('open')
+        })
+        let mm = new MagnetMouse({
+          magnet: {
+            element: '.hamburger',
+            distance: 20,
+          }
+        });
+
+        mm.init();
+    </script>
+
+</body>
+</html>
